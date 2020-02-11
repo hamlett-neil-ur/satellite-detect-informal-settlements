@@ -1,6 +1,6 @@
 
 <p align="center">
-<img height="60" width="60" src="./Graphics/GA_logo.png" > 
+<img height="90" width="90" src="./Graphics/GA_logo.png" > 
 
 # Improve Slum Area Identification through Real-Estate Data (problem 18)
 
@@ -13,24 +13,35 @@ https://git.generalassemb.ly/DSI-US-10/project-client-project
 
 ## Team members:
 Michael Ono
+
 Dylan Blough
+
 Neil Hamlett
 
-## Problem Statement: 
+## Problem Statement. 
 
-Mapping of informal settlements with satellite imagery is a long-standing practice, but such methods could be enhanced through web-scraped real-estate data. This project would build a web scraper to house and apartment adverts for a selected city in Africa/Latin America/Middle East. The scraper should download all adverts in the city during a recent period (ideally 3 years or more); and map all the adverts. The project should test the feasibility of estimating informal tenure from this information. Using gridded population estimates (e.g. from Facebook), the team would calculate the ratio of real estate adverts with population density. This ratio could serve as an input to machine learning models aimed at mapping informal settlements.
+Mapping of ***informal settlements*** with satellite imagery is a long-standing practice, but such methods could be enhanced through web-scraped real-estate data. This project would build a web scraper to house and apartment adverts for a selected city in Africa/Latin America/Middle East. The scraper should download all adverts in the city during a recent period (ideally 3 years or more); and map all the adverts. The project should test the feasibility of estimating informal tenure from this information. Using gridded population estimates (e.g. from Facebook), the team would calculate the ratio of real estate adverts with population density. This ratio could serve as an input to machine learning models aimed at mapping informal settlements.
+
+
+## Elaboration.
+
+***Informal settlements*** (*aka* "slums") can be defined as " highly populated urban residential area consisting mostly of closely packed, decrepit housing units in a situation of deteriorated or incomplete infrastructure, inhabited primarily by impoverished persons" [Wikipedia](https://en.wikipedia.org/wiki/Slum).  For our purposes *informal settlements* are urban residential 
 
 -----
 -----
 <p align="center">
+
 # DSI Boilerplate.
+
 </p>
 
 
 ## Proposed Deliverables:
 
 ⓵ A short write up describing the project, results, and next steps or proposal to scale
+
 ⓶ Open source code for full process from gathering data to calculating and mapping the real estate to population density ratio
+
 ⓷ Proof of concept or pilot from a city or collection of cities.
 
 ## Requirements
