@@ -22,6 +22,8 @@ Neil Hamlett
 
 Mapping of ***informal settlements*** with satellite imagery is a long-standing practice, but such methods could be enhanced through web-scraped real-estate data. This project would build a web scraper to house and apartment adverts for a selected city in Africa/Latin America/Middle East. The scraper should download all adverts in the city during a recent period (ideally 3 years or more); and map all the adverts. The project should test the feasibility of estimating informal tenure from this information. Using gridded population estimates (e.g. from Facebook), the team would calculate the ratio of real estate adverts with population density. This ratio could serve as an input to machine learning models aimed at mapping informal settlements.
 
+The team selected Johannesburg, SA for purposes of prototyping.  Johannesburg meets multiple criteria.  It is a major population center in a developing economy. This is a client criterion.  For data-availability purposes, SA is the most-developed economy on the Africa continent. 
+
 
 ## Elaboration.
 
@@ -35,7 +37,17 @@ Two types of information sources interest us.  Our basic problem leads us to pri
 
 ### *Official* sources.
 
+Two *official* sources present themselves.
 
+#### Census data.
+
+South Africa last conducted a census in 2011 [[stats sa]](http://www.statssa.gov.za).  A *Community-Survey* update was performed in 2016.  Census data is the "most-official" source of information.  It is however most-likely tied to officially-registered residencies. 
+
+For purposes of slum-identification, provides an official reference of legally-sanctioned residencies. It is also easily accessible.  Some work is necessary to transform it to a geospatial reference frame.
+
+Census data suffers from the disadvantage of the low frequency of its update. We get a full update once per decade.  A secondary update occurs at decade midpoints.
+
+For prototype purposes, South Africa might give us advantage over other jurisdictions. Its institutions are more-mature.  Not every country may have 
 
 
 
