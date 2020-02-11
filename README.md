@@ -47,7 +47,11 @@ For purposes of slum-identification, provides an official reference of legally-s
 
 Census data suffers from the disadvantage of the low frequency of its update. We get a full update once per decade.  A secondary update occurs at decade midpoints.
 
-For prototype purposes, South Africa might give us advantage over other jurisdictions. Its institutions are more-mature.  Not every country may have 
+For prototype purposes, South Africa might give us advantage over other jurisdictions. Its institutions are more-mature.  Not every country may have census measurements as frequent, or accurate as South Africa.
+
+#### Commercial sources.
+
+The problem statement suggests looking at commercial sources.  These might include real-estate listings, or AirBnB listings.  These data are more-frequently updated than official sources, like census.  
 
 
 
