@@ -1,6 +1,6 @@
 
 <p align="center">
-<img height="60" width="120" src="https://git.generalassemb.ly/hamlett-neil-ga/project_2/blob/master/Graphics/UR_Logo.jpg" > 
+<img height="60" width="120" src="t.ly/xBwJK" > 
 
 # Improve Slum Area Identification through Real-Estate Data (problem 18)
 
