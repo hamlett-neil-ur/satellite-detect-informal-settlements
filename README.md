@@ -1,6 +1,6 @@
 
 <p align="center">
-<img height="60" width="120" src="./Graphics/GA_logo.png" > 
+<img height="60" width="60" src="./Graphics/GA_logo.png" > 
 
 # Improve Slum Area Identification through Real-Estate Data (problem 18)
 
