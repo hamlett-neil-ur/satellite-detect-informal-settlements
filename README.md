@@ -45,7 +45,9 @@ Our analysis involves fusion of three sources of information.  These are:
 
 ⓷ "Alternative" population-distribution information.
 
+### Geospatial reference frame.
 
+We derive our geospatial reference frame from geo-referenced 
 
 <p align="center">
 
@@ -55,7 +57,12 @@ Our analysis involves fusion of three sources of information.  These are:
 
 </p>
 
-Two types of information sources interest us.  Our basic problem leads us to primarily consider geospatial information sources (GIS). 
+Two types of information sources interest us.  Our basic problem leads us to primarily consider geospatial information sources (GIS). Several sources exist [[EOS, April 19, 2019]](https://eos.com/blog/7-top-free-satellite-imagery-sources-in-2019/) for high-resolution overhead imagery.  Given the proof-of-concept nature of the present study, [Google Earth](https://www.google.com/earth/) is employed.
+
+Overhead imagery downloaded from Google Earth is not geo-referenced.  That is, each pixel is not associated with a distinct longitude (𝘓) and latitude (λ). We employ here a [simple procedure](https://www.youtube.com/watch?v=pVgDyh_YBcI) described in the [*Geo-Spatial Tutorials*](https://www.youtube.com/channel/UCK-8Ky7ZiohkOrHpe6EM1Lw/about) youtube channel.  
+
+This procedure involves adding a limited number of geo-refernced labels to a Google-Earth image. We then use the open-source [QGIS](https://www.qgis.org/en/site/) tool to attribute (𝘓, λ) associations to our labels.  This produces a [GeoTiff](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff) image with an estimated pixel resolution in the range of one-half to one meter.
+  
 
 
 
