@@ -125,7 +125,7 @@ Figure 2, in addition to
 
 #### Figure 5 — Illustration of discrete-wavelet transformation of exemplary image window.
 
-<img width="840" src="./Assets/J-berg O-head Imagery/nice_area_dwt.png" > 
+<img width="840" src="./Graphics/nice_area_dwt.png" > 
 
 </p>
 
