@@ -33,7 +33,12 @@ We seek here to identify local concentrations that are not reflected in official
 
 ## Information sources.
 
+<img height="240" src="./Graphics/200218 GIS Data Architecture.svg.png" > 
+
+
 Two types of information sources interest us.  Our basic problem leads us to primarily consider geospatial information sources (GIS). 
+
+
 
 ### *Official* sources.
 
