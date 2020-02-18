@@ -33,6 +33,18 @@ We seek here to identify local concentrations that are not reflected in official
 
 ## Information sources.
 
+Figure 1 depicts the information architecture for our study.  We fundamentally approach this as a [geospatial-information science (GIS)](https://www.careerexplorer.com/careers/geospatial-information-scientist/) problem. We seek to compare official geospatial population distributions with those obtained from other means.
+
+Our analysis involves fusion of three sources of information.  These are:
+
+⓵ An underlying geopsatial reference frame;
+
+⓶ "Official" population-distribution information; and 
+
+⓷ "Alternative" population-distribution information.
+
+
+
 <p align="center">
 
 #### Figure 1 — Conceptual information architecture for study.
