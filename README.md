@@ -135,7 +135,15 @@ Figure 2, in addition to representing our our information architecture, makes br
 
 For this stage, we use an unsupervised-learning approach.  This is the first step en route to a binary-classification model.  We gain insight into the features that are likely to discriminate between "slums" and non-slums. We seek to compare population clusters in our "ambient" data with those from the "official" measurements.
 
-Making the step towards an actual classification model at this stage seems problematic.  First, we lack extensive ground truth regarding "slums" and non-slums. We have in our region one known-"slum" area, [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng). This is not enough to train a statistical model.  
+Making the step towards an actual classification model at this stage seems problematic.  First, we lack extensive ground truth regarding "slums" and non-slums. We have in our region one known-"slum" area, [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng). This is insufficient to train a statistical model.  
+
+So, our explanatory-variable set includes the following:
+
+⧐ Features from our Facebook population-density estimates including both geographic (𝘓, λ) and the actual population estimates;
+
+⧐ Features extracted from our overhead imagery.
+
+The geographic (𝘓, λ) variables seek to introduce spatial coherence.  That is, we expect population at one measurement point to be generally correlated with estimates at other points in the vicinity.  
 
 Our *ad hoc* model evaluation seeks to compare results from our unsupervised model with 
 
