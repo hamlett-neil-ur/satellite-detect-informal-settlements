@@ -114,7 +114,7 @@ Our problem statement
 
 <p align="center">
 
-<img width="840" src="./Graphics/M. Ono Fill Insvg.png" > 
+<img width="840" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
 
 </p>
 
