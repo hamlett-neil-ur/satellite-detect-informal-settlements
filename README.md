@@ -8,15 +8,14 @@
 </p>
 
 
-## Due Feb 21st
+## Friday, February 21, 2020.
 https://git.generalassemb.ly/DSI-US-10/project-client-project
 
 ## Team members:
-Michael Ono
 
-Dylan Blough
+|[Michael Ono](https://www.linkedin.com/in/michael-ono/)|[Dylan Blough](https://www.linkedin.com/in/dylan-blough-b2185619a/)|[Neil Hamlett](https://www.linkedin.com/in/neil-hamlett-strategic-quant/)|
+|---|---|---|
 
-Neil Hamlett
 
 ## Problem Statement. 
 
@@ -33,9 +32,21 @@ We seek here to identify local concentrations that are not reflected in official
 
 Some "ground truth" is available.  A Wikipedia article [*List of slums in South Africa*](https://en.wikipedia.org/wiki/List_of_slums_in_South_Africa) specifically identifies [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng) in [Johennesburg](https://en.wikipedia.org/wiki/Johannesburg), our target region.  This area is visually distinct in overhead imagery we use in our analysis.
 
-## Information sources.
+## Technical Approach.
 
-Figure 1 depicts the information architecture for our study.  We fundamentally approach this as a [geospatial-information science (GIS)](https://www.careerexplorer.com/careers/geospatial-information-scientist/) problem. We seek to compare official geospatial population distributions with those obtained from other means.
+We apply the [Cross-Industry Standard Process – Data Mining](http://4.bp.blogspot.com/-0iGdZDGnLks/VDA-7DKV_NI/AAAAAAAAAEI/IqYBNniTlZA/s1600/141004%2BFormal%2BMethods%2BComparison.png) (CRISP–DM).  Figure 1 provides an overview.  This method has provided the foundations for delivery methods used by many leading technology firms, including IBM.  
+
+CRISP–DM contains more-direct coupling to the business context than some more data-centric methods.  It also provides more-explicit guidance on iterativity, an inescapable part of modeling.  The following subsections summarize its employment in this project.
+
+#### ***Figure 1*** — Comparison of CRISP–DM method with other data and analytics methods (From [[Hamlett, 2014]](http://quantsprism.blogspot.com/2014/10/getting-value-from-business-analytics.html)).
+<p align="center">
+	<img height="300" width="600" src="/Graphics/141004_Formal_Methods_Comparison.png" > 
+</p>
+
+
+## Data Understanding, Preparation.
+
+Figure 2 depicts the information architecture for our study.  We fundamentally approach this as a [geospatial-information science (GIS)](https://www.careerexplorer.com/careers/geospatial-information-scientist/) problem. We seek to compare official geospatial population distributions with those obtained from other means.
 
 Our analysis involves fusion of three sources of information.  These are:
 
@@ -45,37 +56,105 @@ Our analysis involves fusion of three sources of information.  These are:
 
 ⓷ "Alternative" population-distribution information.
 
+### Geospatial reference frame.
 
+We derive our geospatial reference frame from geo-referenced 
 
 <p align="center">
 
-#### Figure 1 — Conceptual information architecture for study.
+#### Figure 2 — Conceptual information architecture for study.
 
 <img width="840" src="./Graphics/200218 GIS Data Architecture.svg.png" > 
 
 </p>
 
-Two types of information sources interest us.  Our basic problem leads us to primarily consider geospatial information sources (GIS). 
+Two types of information sources interest us.  Our basic problem leads us to primarily consider geospatial information sources (GIS). Several sources exist [[EOS, April 19, 2019]](https://eos.com/blog/7-top-free-satellite-imagery-sources-in-2019/) for high-resolution overhead imagery.  Given the proof-of-concept nature of the present study, [Google Earth](https://www.google.com/earth/) is employed.
+
+Overhead imagery downloaded from Google Earth is not geo-referenced.  That is, each pixel is not associated with a distinct longitude (𝘓) and latitude (λ). We employ here a [simple procedure](https://www.youtube.com/watch?v=pVgDyh_YBcI) described in the [*Geo-Spatial Tutorials*](https://www.youtube.com/channel/UCK-8Ky7ZiohkOrHpe6EM1Lw/about) youtube channel.  
+
+This procedure involves adding a limited number of geo-refernced labels to a Google-Earth image. We then use the open-source [QGIS](https://www.qgis.org/en/site/) tool to attribute (𝘓, λ) associations to our labels.  This produces a [GeoTiff](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff) image with an estimated pixel resolution in the range of five to ten meters. Other sources provide resolution as high as one meter.  Our order-of-half-meter resolution suffices for this proof of concept. 
+
+Figure 3 shows Google-Earth image prior to geo-referencing in QGIS.  The yellow-colored thumbtacks  are labeled (𝘓, λ) associations for each point.  We use QGIS' [Georeferencer](https://docs.qgis.org/2.18/en/docs/training_manual/forestry/map_georeferencing.html) plug in to develop an affine transform between pixels and (𝘓, λ) positions on the Earth's surface.
+  
+<p align="center">
+
+#### Figure 3 — Geo-reference-tagged overhead-image download from Google Earth.
+
+<img width="840" src="./Assets/J-berg O-head Imagery/200216 J-Berg O-head Image.jpg" > 
+
+</p>
+
+
+### *Official* population-distribution data.
+
+South Africa (SA) last conducted a census in 2011 [[stats sa]](http://www.statssa.gov.za).  A *Community-Survey* update was performed in 2016.  Census data is the "most-official" source of information.  It is however most-likely tied to officially-registered residencies. 
+
+SA census data provides population summaries at the administrative subdivision level.  These data represent an SA's attempt to provide an exhaustive measurement of its inhabitants. For our purposes, this source suffers from two shortcomings.  First, it is collected relatively infrequently.  Exhaustive censuses are resource-intensive activities.
+
+Second, the census data records population at a relatively low resolution. We end up with discrete distributions.  We assume constant distribution throughout all area within the boundaries of the administrative subdivision.  
+
+Consequently we cannot perform statistical analysis that is possible with more-granular data. We must treat the population-distribution data within these administrative subdivisions as opaque clusters.  Fortunately, well-established methods exist for comparison with cluster information derived from other sources.  [[Weiss, *et al*, 2010, §5.1]](https://www.springer.com/us/book/9781447125655) describes such an approach in a text-mining context.
+
+
+### *Alternative* population-distribution data.
+
+We use [Facebook Population-Density Maps](https://dataforgood.fb.com/tools/population-density-maps/) as an alternative source of population-distribution data. We only understand [the provenance of this source in general terms](https://dataforgood.fb.com/docs/methodology-high-resolution-population-density-maps-demographic-estimates/).  
+
+Ostensibly, these distributions are statistically derived from a combination of census data and overhead-imagery processing.  They offer important advantages over the census data, for our purposes.  First, they are updated annually.  Secondly, they purportedly report population distribution at resolution on the order of 30 meters.
+
+Figure 4 contains the overlay of the FaceBook population-density data onto Figure 2, our geospatial reference frame for the Johannesburg, SA region. The red-colored pixels contain all estimates for our region of interest. We have ≳94,000 estimates in this region.
+
+Our quick-and-dirty georeferencing introduced some noise into our image, however. This is the "thumbtack" labels applied using Google Earth.  We exclude these from the portion of the region we process. The light-blue-colored box shows our windowing.  Within this window, we have ≲65,000 measurements.
+
+That narrow unpopulated areas appear in this overlay enhances our confidence in our georeferencing. For example, we do not have population estimates on what appear to be major thoroughfares and golf courses.
+
+<p align="center">
+
+#### Figure 4 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
+
+<img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
+
+</p>
+
+### *Commercial*, ad-hoc population-distribution data.
+
+Our problem statement suggested the use of real-estate listings. ....
+
+<p align="center">
+
+<img width="840" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
+
+</p>
 
 
 
-### *Official* sources.
 
-Two *official* sources present themselves.
+## Approach to modeling.
 
-#### Census data.
+Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including population-distribution attributes, and overhead imagery.
 
-South Africa last conducted a census in 2011 [[stats sa]](http://www.statssa.gov.za).  A *Community-Survey* update was performed in 2016.  Census data is the "most-official" source of information.  It is however most-likely tied to officially-registered residencies. 
+For this stage, we use an unsupervised-learning approach.  This is the first step en route to a binary-classification model.  We gain insight into the features that are likely to discriminate between "slums" and non-slums. We seek to compare population clusters in our "ambient" data with those from the "official" measurements.
 
-For purposes of slum-identification, provides an official reference of legally-sanctioned residencies. It is also easily accessible.  Some work is necessary to transform it to a geospatial reference frame.
+Making the step towards an actual classification model at this stage seems problematic.  First, we lack extensive ground truth regarding "slums" and non-slums. We have in our region one known-"slum" area, [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng). This is not enough to train a statistical model.  
 
-Census data suffers from the disadvantage of the low frequency of its update. We get a full update once per decade.  A secondary update occurs at decade midpoints.
+Our *ad hoc* model evaluation seeks to compare results from our unsupervised model with 
 
-For prototype purposes, South Africa might give us advantage over other jurisdictions. Its institutions are more-mature.  Not every country may have census measurements as frequent, or accurate as South Africa.
 
-#### Commercial sources.
 
-The problem statement suggests looking at commercial sources.  These might include real-estate listings, or AirBnB listings.  These data are more-frequently updated than official sources, like census.  
+### Feature engineering:  Discrete Wavelet Transform.
+
+We seek to incorporate features from our overhead imagery into our statistical model.  The Discrete Wavelet Transform (DWT) (e.g., [[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)) enjoys widespread use in image-processing applications. Most-prominently, it forms the basis for the [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000) and [MPEG](http://www.users.abo.fi/jawester/mpeg4/MPEG4_fundamentals2.pdf) data-compression methods.
+
+
+
+<p align="center">
+
+#### Figure 5 — Illustration of discrete-wavelet transformation of exemplary image window.
+
+<img width="840" src="./Graphics/nice_area_dwt.png" > 
+
+</p>
+
 
 
 
