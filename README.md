@@ -8,7 +8,7 @@
 </p>
 
 
-## Due Feb 21st
+## Friday, February 21, 2020.
 https://git.generalassemb.ly/DSI-US-10/project-client-project
 
 ## Team members:
