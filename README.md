@@ -61,29 +61,32 @@ Two types of information sources interest us.  Our basic problem leads us to pri
 
 Overhead imagery downloaded from Google Earth is not geo-referenced.  That is, each pixel is not associated with a distinct longitude (𝘓) and latitude (λ). We employ here a [simple procedure](https://www.youtube.com/watch?v=pVgDyh_YBcI) described in the [*Geo-Spatial Tutorials*](https://www.youtube.com/channel/UCK-8Ky7ZiohkOrHpe6EM1Lw/about) youtube channel.  
 
-This procedure involves adding a limited number of geo-refernced labels to a Google-Earth image. We then use the open-source [QGIS](https://www.qgis.org/en/site/) tool to attribute (𝘓, λ) associations to our labels.  This produces a [GeoTiff](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff) image with an estimated pixel resolution in the range of one-half to one meter.
+This procedure involves adding a limited number of geo-refernced labels to a Google-Earth image. We then use the open-source [QGIS](https://www.qgis.org/en/site/) tool to attribute (𝘓, λ) associations to our labels.  This produces a [GeoTiff](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff) image with an estimated pixel resolution in the range of five to ten meters. Other sources provide resolution as high as one meter.  Our order-of-half-meter resolution suffices for this proof of concept. 
   
+<p align="center">
+
+#### Figure 2 — Conceptual information architecture for study.
+
+<img width="840" src="./Assets/J-berg O-head Imagery/200216 J-Berg O-head Image.jpg" > 
+
+</p>
+
+
+### *Official* population-distribution data.
+
+South Africa (SA) last conducted a census in 2011 [[stats sa]](http://www.statssa.gov.za).  A *Community-Survey* update was performed in 2016.  Census data is the "most-official" source of information.  It is however most-likely tied to officially-registered residencies. 
+
+SA census data provides population summaries at the administrative subdivision level.  These data represent an SA's attempt to provide an exhaustive measurement of its inhabitants. For our purposes, this source suffers from two shortcomings.  First, it is collected relatively infrequently.  Exhaustive censuses are resource-intensive activities.
+
+Second, the census data records population at a relatively low resolution. We end up with discrete distributions.  We assume constant distribution throughout all area within the boundaries of the administrative subdivision.  Consequently we cannot perform statistical analysis that is possible with 
 
 
 
-### *Official* sources.
 
-Two *official* sources present themselves.
 
-#### Census data.
+### *Alternative* population-distribution data.
 
-South Africa last conducted a census in 2011 [[stats sa]](http://www.statssa.gov.za).  A *Community-Survey* update was performed in 2016.  Census data is the "most-official" source of information.  It is however most-likely tied to officially-registered residencies. 
-
-For purposes of slum-identification, provides an official reference of legally-sanctioned residencies. It is also easily accessible.  Some work is necessary to transform it to a geospatial reference frame.
-
-Census data suffers from the disadvantage of the low frequency of its update. We get a full update once per decade.  A secondary update occurs at decade midpoints.
-
-For prototype purposes, South Africa might give us advantage over other jurisdictions. Its institutions are more-mature.  Not every country may have census measurements as frequent, or accurate as South Africa.
-
-#### Commercial sources.
-
-The problem statement suggests looking at commercial sources.  These might include real-estate listings, or AirBnB listings.  These data are more-frequently updated than official sources, like census.  
-
+We use 
 
 
 -----
