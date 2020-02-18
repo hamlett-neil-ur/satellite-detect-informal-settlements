@@ -117,7 +117,18 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 </p>
 
 
-## Approach to analysis.
+## Approach to modeling.
+
+Figure 2, in addition to 
+
+<p align="center">
+
+#### Figure 5 — Illustration of discrete-wavelet transformation of exemplary image window.
+
+<img width="840" src="./Assets/J-berg O-head Imagery/nice_area_dwt.png" > 
+
+</p>
+
 
 -----
 -----
