@@ -33,8 +33,13 @@ We seek here to identify local concentrations that are not reflected in official
 
 ## Information sources.
 
+<p align="center">
+
+#### Figure 1 — Conceptual information architecture for study.
+
 <img width="840" src="./Graphics/200218 GIS Data Architecture.svg.png" > 
 
+</p>
 
 Two types of information sources interest us.  Our basic problem leads us to primarily consider geospatial information sources (GIS). 
 
