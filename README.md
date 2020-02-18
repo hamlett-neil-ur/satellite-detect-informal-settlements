@@ -161,7 +161,9 @@ Conceptually, DWTs somewhat resemble a hybrid between a tree and principal-compo
 
 The distinct Facebook population-density estimates at 30-meter resolution provide our principal explanatory variables.  These contain geographic (𝘓, λ) and point population-density estimates.  We extend these with imagery-feature attributes.  First, we compress our three-channel (Red, Blue Green) image into a single-channel gray-scale intensity array. We take a 128×128-pixel window centered on each Facebook population-density estimate. 
 
-Figure 5 illustrates our DWT process. 
+Figure 5 illustrates the DWT process. The original image is a 128×128-pixel window  centered at 27.985𝘓, -26.115λ. Figure 5 shows a four-level DWT decomposition.  Our *Original Image* is *Level 0*.  Generating each subsequent level involves quaternary orthogonal decomposition of each 
+
+Our model is based on three levels. This produces a model matr
 
 
 <p align="center">
@@ -171,6 +173,16 @@ Figure 5 illustrates our DWT process.
 <img width="840" src="./Graphics/nice_area_dwt.png" > 
 
 </p>
+
+### Unsupervised-model calculation:  K-means clustering.
+
+
+
+## Model evaluation.
+
+
+## Conclusions and recommendations for further work.
+
 
 
 
