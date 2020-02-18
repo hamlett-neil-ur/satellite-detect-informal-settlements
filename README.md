@@ -12,11 +12,10 @@
 https://git.generalassemb.ly/DSI-US-10/project-client-project
 
 ## Team members:
-Michael Ono
 
-Dylan Blough
-
-Neil Hamlett
+||||
+|---|---|---|
+|Michael Ono|Dylan Blough|Neil Hamlett|
 
 ## Problem Statement. 
 
