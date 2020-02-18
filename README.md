@@ -38,10 +38,15 @@ We apply the [Cross-Industry Standard Process – Data Mining](http://4.bp.blogs
 
 CRISP–DM contains more-direct coupling to the business context than some more data-centric methods.  It also provides more-explicit guidance on iterativity, an inescapable part of modeling.  The following subsections summarize its employment in this project.
 
+#### ***Figure 1*** — Comparison of CRISP–DM method with other data and analytics methods (From [[Hamlett, 2014]](http://quantsprism.blogspot.com/2014/10/getting-value-from-business-analytics.html)).
+<p align="center">
+	<img height="300" width="600" src="/Graphics/141004_Formal_Methods_Comparison.png" > 
+</p>
+
 
 ## Data Understanding, Preparation.
 
-Figure 1 depicts the information architecture for our study.  We fundamentally approach this as a [geospatial-information science (GIS)](https://www.careerexplorer.com/careers/geospatial-information-scientist/) problem. We seek to compare official geospatial population distributions with those obtained from other means.
+Figure 2 depicts the information architecture for our study.  We fundamentally approach this as a [geospatial-information science (GIS)](https://www.careerexplorer.com/careers/geospatial-information-scientist/) problem. We seek to compare official geospatial population distributions with those obtained from other means.
 
 Our analysis involves fusion of three sources of information.  These are:
 
@@ -57,7 +62,7 @@ We derive our geospatial reference frame from geo-referenced
 
 <p align="center">
 
-#### Figure 1 — Conceptual information architecture for study.
+#### Figure 2 — Conceptual information architecture for study.
 
 <img width="840" src="./Graphics/200218 GIS Data Architecture.svg.png" > 
 
@@ -69,11 +74,11 @@ Overhead imagery downloaded from Google Earth is not geo-referenced.  That is, e
 
 This procedure involves adding a limited number of geo-refernced labels to a Google-Earth image. We then use the open-source [QGIS](https://www.qgis.org/en/site/) tool to attribute (𝘓, λ) associations to our labels.  This produces a [GeoTiff](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff) image with an estimated pixel resolution in the range of five to ten meters. Other sources provide resolution as high as one meter.  Our order-of-half-meter resolution suffices for this proof of concept. 
 
-Figure 2 shows Google-Earth image prior to geo-referencing in QGIS.  The yellow-colored thumbtacks  are labeled (𝘓, λ) associations for each point.  We use QGIS' [Georeferencer](https://docs.qgis.org/2.18/en/docs/training_manual/forestry/map_georeferencing.html) plug in to develop an affine transform between pixels and (𝘓, λ) positions on the Earth's surface.
+Figure 3 shows Google-Earth image prior to geo-referencing in QGIS.  The yellow-colored thumbtacks  are labeled (𝘓, λ) associations for each point.  We use QGIS' [Georeferencer](https://docs.qgis.org/2.18/en/docs/training_manual/forestry/map_georeferencing.html) plug in to develop an affine transform between pixels and (𝘓, λ) positions on the Earth's surface.
   
 <p align="center">
 
-#### Figure 2 — Geo-reference-tagged overhead-image download from Google Earth.
+#### Figure 3 — Geo-reference-tagged overhead-image download from Google Earth.
 
 <img width="840" src="./Assets/J-berg O-head Imagery/200216 J-Berg O-head Image.jpg" > 
 
@@ -97,7 +102,7 @@ We use [Facebook Population-Density Maps](https://dataforgood.fb.com/tools/popul
 
 Ostensibly, these distributions are statistically derived from a combination of census data and overhead-imagery processing.  They offer important advantages over the census data, for our purposes.  First, they are updated annually.  Secondly, they purportedly report population distribution at resolution on the order of 30 meters.
 
-Figure 3 contains the overlay of the FaceBook population-density data onto Figure 2, our geospatial reference frame for the Johannesburg, SA region. The red-colored pixels contain all estimates for our region of interest. We have ≳94,000 estimates in this region.
+Figure 4 contains the overlay of the FaceBook population-density data onto Figure 2, our geospatial reference frame for the Johannesburg, SA region. The red-colored pixels contain all estimates for our region of interest. We have ≳94,000 estimates in this region.
 
 Our quick-and-dirty georeferencing introduced some noise into our image, however. This is the "thumbtack" labels applied using Google Earth.  We exclude these from the portion of the region we process. The light-blue-colored box shows our windowing.  Within this window, we have ≲65,000 measurements.
 
@@ -105,7 +110,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 <p align="center">
 
-#### Figure 3 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
+#### Figure 4 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
 
 <img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
 
