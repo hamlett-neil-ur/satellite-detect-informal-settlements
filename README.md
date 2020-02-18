@@ -94,7 +94,7 @@ Ostensibly, these distributions are statistically derived from a combination of 
 
 #### Figure 3 — Facebook population-distribution measurements within the greater Johennesburg, SA retion..
 
-<img width="840" src="./Assets/J-berg O-head Imagery/pop_density_geo_overlay.png" > 
+<img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
 
 </p>
 
