@@ -15,7 +15,7 @@ https://git.generalassemb.ly/DSI-US-10/project-client-project
 
 ||||
 |---|---|---|
-|Michael Ono|Dylan Blough|Neil Hamlett|
+|[Michael Ono](https://www.linkedin.com/in/michael-ono/)|[Dylan Blough](https://www.linkedin.com/in/dylan-blough-b2185619a/)|[Neil Hamlett](https://www.linkedin.com/in/neil-hamlett-strategic-quant/)|
 
 ## Problem Statement. 
 
