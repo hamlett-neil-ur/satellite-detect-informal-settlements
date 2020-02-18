@@ -133,7 +133,7 @@ Our problem statement suggested the use of real-estate listings. ....
 
 Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including population-distribution attributes, and overhead imagery.
 
-We approach this 
+For this stage, we use an unsupervised-learning approach.  This is the first step en route to a binary-classification model.  We gain insight into the features that are likely to discriminate between "slums" and non-slums. 
 
 <p align="center">
 
