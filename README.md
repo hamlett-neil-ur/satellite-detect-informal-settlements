@@ -133,7 +133,19 @@ Our problem statement suggested the use of real-estate listings. ....
 
 Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including population-distribution attributes, and overhead imagery.
 
-For this stage, we use an unsupervised-learning approach.  This is the first step en route to a binary-classification model.  We gain insight into the features that are likely to discriminate between "slums" and non-slums. 
+For this stage, we use an unsupervised-learning approach.  This is the first step en route to a binary-classification model.  We gain insight into the features that are likely to discriminate between "slums" and non-slums. We seek to compare population clusters in our "ambient" data with those from the "official" measurements.
+
+Making the step towards an actual classification model at this stage seems problematic.  First, we lack extensive ground truth regarding "slums" and non-slums. We have in our region one known-"slum" area, [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng). This is not enough to train a statistical model.  
+
+Our *ad hoc* model evaluation seeks to compare results from our unsupervised model with 
+
+
+
+### Feature engineering:  Discrete Wavelet Transform.
+
+We seek to incorporate features from our overhead imagery into our statistical model.  The Discrete Wavelet Transform (DWT) (e.g., [[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)) enjoys widespread use in image-processing applications. Most-prominently, it forms the basis for the [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000) and [MPEG](http://www.users.abo.fi/jawester/mpeg4/MPEG4_fundamentals2.pdf) data-compression methods.
+
+
 
 <p align="center">
 
@@ -143,7 +155,7 @@ For this stage, we use an unsupervised-learning approach.  This is the first ste
 
 </p>
 
-[[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)
+
 
 
 -----
