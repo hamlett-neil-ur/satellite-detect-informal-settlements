@@ -131,7 +131,9 @@ Our problem statement suggested the use of real-estate listings. ....
 
 ## Approach to modeling.
 
-Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including our population
+Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including population-distribution attributes, and overhead imagery.
+
+We approach this 
 
 <p align="center">
 
@@ -140,6 +142,8 @@ Figure 2, in addition to representing our our information architecture, makes br
 <img width="840" src="./Graphics/nice_area_dwt.png" > 
 
 </p>
+
+[[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)
 
 
 -----
