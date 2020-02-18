@@ -108,16 +108,6 @@ Our quick-and-dirty georeferencing introduced some noise into our image, however
 
 That narrow unpopulated areas appear in this overlay enhances our confidence in our georeferencing. For example, we do not have population estimates on what appear to be major thoroughfares and golf courses.
 
-### *Commercial*, ad-hoc population-distribution data.
-
-Our problem statement 
-
-<p align="center">
-
-<img width="840" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
-
-</p>
-
 <p align="center">
 
 #### Figure 4 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
@@ -125,6 +115,18 @@ Our problem statement
 <img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
 
 </p>
+
+### *Commercial*, ad-hoc population-distribution data.
+
+Our problem statement suggested the use of real-estate listings. ....
+
+<p align="center">
+
+<img width="840" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
+
+</p>
+
+
 
 
 ## Approach to modeling.
