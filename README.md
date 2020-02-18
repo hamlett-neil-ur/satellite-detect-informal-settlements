@@ -108,6 +108,16 @@ Our quick-and-dirty georeferencing introduced some noise into our image, however
 
 That narrow unpopulated areas appear in this overlay enhances our confidence in our georeferencing. For example, we do not have population estimates on what appear to be major thoroughfares and golf courses.
 
+### *Commercial*, ad-hoc population-distribution data.
+
+Our problem statement 
+
+<p align="center">
+
+<img width="840" src="./Graphics/M. Ono Fill Insvg.png" > 
+
+</p>
+
 <p align="center">
 
 #### Figure 4 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
@@ -119,7 +129,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 ## Approach to modeling.
 
-Figure 2, in addition to 
+Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including our population
 
 <p align="center">
 
