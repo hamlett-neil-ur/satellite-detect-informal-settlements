@@ -194,7 +194,7 @@ Finally, meta-parameter searches of the `n_clust` number of clusters attribute f
 
 #### Figure 7 — Cluster silhouette scores [`sklearn.metrics.silhouette_score`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) versus `n_cluster` for kMeans clusters.
 
-<img width="600" align = "center" src="./Graphics/silhouette_vs_nclust.png" > 
+<img width="840" align = "center" src="./Graphics/silhouette_vs_nclust.png" > 
 
 </p>
 
