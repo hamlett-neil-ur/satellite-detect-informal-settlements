@@ -198,12 +198,18 @@ Finally, meta-parameter searches of the `n_clust` number of clusters attribute f
 
 </p>
 
-What was happening?
+*What appears to be happening*?  Figure 8 shows two-dimensional kernel-density estimates [`seaborn.kdeplot`](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) for nine arbitrarily-selected clusters.  These seem to explain the week silhouette scores.  Three observations are noteworthy.
+
+First, the cluster distributions are nonconvex and widely distributed.  They are particularly expansive in the vertical dimension.  We have multiple peaks.  This means lots of cluster members are going to be widely separated, with dilutes silhouette scores.
+
+Second, we see more-localized clusters in the vicinity of our know "slum", Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng).  This is the bright area bounded by about 28.08 and 28.1 𝘓 and -26.13 and 26.11 λ. *Our imagery features appear to discriminate slum from non-slum areas*.
+
+Thirdly, 
 
 
 <p align="center">
 
-#### Figure 8 — .
+#### Figure 8 — Kernel-Density Estimate (KDE) plots [`seaborn.kdeplot`](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) for nine selected clusters.
 
 <img width="840" align = "center" src="./Graphics/selected_cluster_kdes.png" > 
 
@@ -212,6 +218,17 @@ What was happening?
 
 
 ## Model evaluation.
+
+
+<p align="center">
+
+#### Figure 9 — Overlay of contour plots [`matplotlib.pyplot.contour`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html) for all clusters on Johannesburg, SA overhead image with administrative boundaries.
+
+<img width="840" align = "center" src="./Graphics/overlay.png" > 
+
+</p>
+
+
 
 
 ## Conclusions and recommendations for further work.
