@@ -118,15 +118,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 ### *Commercial*, ad-hoc population-distribution data.
 
-Our problem statement suggested the use of real-estate listings. ....
-
-<p align="center">
-
-<img width="840" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
-
-</p>
-
-
+Our problem statement suggested the use of real-estate listings to locate potential slum areas within Johannesburg.
 
 
 ## Approach to modeling.
