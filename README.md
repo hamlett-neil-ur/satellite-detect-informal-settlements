@@ -202,7 +202,7 @@ Finally, meta-parameter searches of the `n_clust` number of clusters attribute f
 
 First, the cluster distributions are nonconvex and widely distributed.  They are particularly expansive in the vertical dimension.  We have multiple peaks.  This means lots of cluster members are going to be widely separated, with dilutes silhouette scores.
 
-Second, we see more-localized clusters in the vicinity of our know "slum", Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng).  This is the bright area bounded by about 28.08 and 28.1 𝘓 and -26.13 and 26.11 λ. *Our imagery features appear to discriminate slum from non-slum areas*.
+Second, we see more-localized clusters in the vicinity of our know "slum", [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng).  This is the bright area bounded by about 28.08 and 28.1 𝘓 and -26.13 and 26.11 λ. *Our imagery features appear to discriminate slum from non-slum areas*.
 
 Thirdly, our non-slum contours appear to be concentrated between about 28.02 and 28.07 𝘓. This seems to be the heart of the Johannesburg populated area.  It seems that the `Population` attribute is dominant in this region.
 
