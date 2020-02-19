@@ -127,6 +127,7 @@ During our search for reliable real estate listing data, we did come across a pa
 </p>
 
 <p align="center">
+#### Figure 5 — AirDNA Listing Site For Future Projects.
 <img height="402" width="800" src="/Graphics/airdna.png" > 
 </p>
 
@@ -169,7 +170,7 @@ Our model is based on three levels. This produces a model matr
 
 <p align="center">
 
-#### Figure 5 — Illustration of discrete-wavelet transformation of exemplary image window.
+#### Figure 6 — Illustration of discrete-wavelet transformation of exemplary image window.
 
 <img width="840" src="./Graphics/nice_area_dwt.png" > 
 
