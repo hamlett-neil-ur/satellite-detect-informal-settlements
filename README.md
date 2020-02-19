@@ -204,7 +204,7 @@ First, the cluster distributions are nonconvex and widely distributed.  They are
 
 Second, we see more-localized clusters in the vicinity of our know "slum", Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng).  This is the bright area bounded by about 28.08 and 28.1 𝘓 and -26.13 and 26.11 λ. *Our imagery features appear to discriminate slum from non-slum areas*.
 
-Thirdly, 
+Thirdly, our non-slum contours appear to be concentrated between about 28.02 and 28.07 𝘓. This seems to be the heart of the Johannesburg populated area.  It seems that the `Population` attribute is dominant in this region.
 
 
 <p align="center">
@@ -219,17 +219,25 @@ Thirdly,
 
 ## Model evaluation.
 
+What this means in terms of our original objective of identifying slums?  Figure 9 attempts to clarify this by overlaying contour plots of the distributions on an overhead image also containing administrative boundaries. The contours are simplifications of the KDE distributions in Figure 8.
+
+For each cluster we calculate the Euclidian distance from its centroid. We draw two contour lines for each cluster.  This gives the location of the peaks of distributions.
+
 
 <p align="center">
 
-#### Figure 9 — Overlay of contour plots [`matplotlib.pyplot.contour`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html) for all clusters on Johannesburg, SA overhead image with administrative boundaries.
+#### Figure 9 — Overlay of contour plots [`matplotlib.pyplot.contour`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html) for selected clusters on Johannesburg, SA overhead image with administrative boundaries.
 
 <img width="840" align = "center" src="./Graphics/overlay.png" > 
 
 </p>
 
 
+<p align="center">
 
+<img width="840" align = "center" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
+
+</p>
 
 ## Conclusions and recommendations for further work.
 
