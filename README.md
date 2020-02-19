@@ -118,15 +118,13 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 ### *Commercial*, ad-hoc population-distribution data.
 
-Our problem statement suggested the use of real-estate listings. ....
-
-<p align="center">
-
-<img width="840" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
-
+<p>
+Our problem statement suggested the use of real-estate listings to locate potential slum areas within Johannesburg. However there aren't any Zillow.com equivalents in South Africa to locate detailed real estate listing information that would allow us to locate price sensitive areas of the municipality.
 </p>
 
-
+<p>
+During our search for reliable real estate listing data, we did come across a paid service that tracks AirBNB rentals that had excellent Johannesburg rental data but that data, was unfortunately, locked behind a paywall that proved too costly for this initial exploration.  Future endevors should attempt to pay and extract this data if the situation allows for it.
+</p>
 
 
 ## Approach to modeling.
@@ -135,16 +133,35 @@ Figure 2, in addition to representing our our information architecture, makes br
 
 For this stage, we use an unsupervised-learning approach.  This is the first step en route to a binary-classification model.  We gain insight into the features that are likely to discriminate between "slums" and non-slums. We seek to compare population clusters in our "ambient" data with those from the "official" measurements.
 
-Making the step towards an actual classification model at this stage seems problematic.  First, we lack extensive ground truth regarding "slums" and non-slums. We have in our region one known-"slum" area, [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng). This is not enough to train a statistical model.  
+Making the step towards an actual classification model at this stage seems problematic.  First, we lack extensive ground truth regarding "slums" and non-slums. We have in our region one known-"slum" area, [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng). This is insufficient to train a statistical model.  
 
-Our *ad hoc* model evaluation seeks to compare results from our unsupervised model with 
+So, our explanatory-variable set includes the following:
+
+⧐ Features from our Facebook population-density estimates including both geographic (𝘓, λ) and the actual population estimates;
+
+⧐ Features extracted from our overhead imagery.
+
+The geographic (𝘓, λ) variables seek to introduce spatial coherence.  That is, we expect population at one measurement point to be generally correlated with estimates at other points in the vicinity.  
+
+The imagery features capture distinct visible characteristics that may distinguish between slum, non-slum, and other areas. Multiple approaches exist.  The [Fast-Fourier Transform](https://en.wikipedia.org/wiki/Fast_Fourier_transform) (FFT) and [Discrete Wavelet Transform](https://en.wikipedia.org/wiki/Discrete_wavelet_transform) (DWT) are common approaches. 
+
+We use DWT here, because of simplicity advantages. First, many DWT families allow us to work with strictly real numbers. FFTs involve complex values, which we seek to avoid. Secondly, DWTs offer feature-reduction advantages.  Finally, some DWTs provide *perfect-reconstruction* advantages.  This can help with interpretability.
+
+Our *ad hoc* model evaluation seeks to compare results from our unsupervised model with our known administrative-domain data from census data.  Geographic (𝘓, λ) and imagery features probably will not discriminate between administrative boundaries. We do expect it however to discriminate slum areas.  After all, a known slum area is visibly distinct in our Google Maps image.
 
 
 
-### Feature engineering:  Discrete Wavelet Transform.
+### Imagery-feature engineering:  Discrete Wavelet Transform (DWT).
 
 We seek to incorporate features from our overhead imagery into our statistical model.  The Discrete Wavelet Transform (DWT) (e.g., [[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)) enjoys widespread use in image-processing applications. Most-prominently, it forms the basis for the [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000) and [MPEG](http://www.users.abo.fi/jawester/mpeg4/MPEG4_fundamentals2.pdf) data-compression methods.
 
+Conceptually, DWTs somewhat resemble a hybrid between a tree and principal-component analysis.  DWT algorithms recursively partition a data set a specified number of times.  The partition is accomplished using *filters*, which orthogonalize the data at each stage. We end up with a set of features that are uncorrelated.
+
+The distinct Facebook population-density estimates at 30-meter resolution provide our principal explanatory variables.  These contain geographic (𝘓, λ) and point population-density estimates.  We extend these with imagery-feature attributes.  First, we compress our three-channel (Red, Blue Green) image into a single-channel gray-scale intensity array. We take a 128×128-pixel window centered on each Facebook population-density estimate. 
+
+Figure 5 illustrates the DWT process. The original image is a 128×128-pixel window  centered at 27.985𝘓, -26.115λ. Figure 5 shows a four-level DWT decomposition.  Our *Original Image* is *Level 0*.  Generating each subsequent level involves quaternary orthogonal decomposition of each 
+
+Our model is based on three levels. This produces a model matr
 
 
 <p align="center">
@@ -154,6 +171,16 @@ We seek to incorporate features from our overhead imagery into our statistical m
 <img width="840" src="./Graphics/nice_area_dwt.png" > 
 
 </p>
+
+### Unsupervised-model calculation:  K-means clustering.
+
+
+
+## Model evaluation.
+
+
+## Conclusions and recommendations for further work.
+
 
 
 
