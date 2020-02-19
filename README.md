@@ -188,8 +188,7 @@ Models were fit for variations on these characteristics, including DWT window si
 
 Also, principal-component analysis (PCA) [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) was applied in an attempt for feature reduction.  Given that all of our features were already mostly orthogonal — except possibly for the population-density estimates, themselves — PCA afforded no reduction in dimensionality. Furthermore, all of the DWT coefficients still contained significant information.
 
-Finally, meta-parameter searches of the `n_clust` number of clusters attribute for the kMeans algorithm [`sklearn.cluster.KMeans`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) were performed.
-
+Finally, meta-parameter searches of the `n_clust` number of clusters attribute for the kMeans algorithm [`sklearn.cluster.KMeans`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) were performed.  Figure 7 shows the results.  The model did not produce significant silhouette scores.
 
 <p align="center">
 
@@ -199,6 +198,16 @@ Finally, meta-parameter searches of the `n_clust` number of clusters attribute f
 
 </p>
 
+What was happening?
+
+
+<p align="center">
+
+#### Figure 8 — .
+
+<img width="840" align = "center" src="./Graphics/selected_cluster_kdes.png" > 
+
+</p>
 
 
 
