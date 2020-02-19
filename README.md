@@ -118,7 +118,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 ### *Commercial*, ad-hoc population-distribution data.
 
-Our problem statement suggested the use of real-estate listings to locate potential slum areas within Johannesburg.
+Our problem statement suggested the use of real-estate listings to locate potential slum areas within Johannesburg. However there aren't any Zillow.com equivalents in South Africa to locate detailed real estate listing information that would allow us to locate price sensitive areas of the municipality.
 
 
 ## Approach to modeling.
