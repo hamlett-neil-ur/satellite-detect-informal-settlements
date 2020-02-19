@@ -186,9 +186,21 @@ We employed a k-Means clustering approach of the data described above.  That is,
 
 Models were fit for variations on these characteristics, including DWT window size and DWT levels. Models were considered with the data scaled and non-scaled.  Non-scaled data produced more-localized results, owing to the affects of strong (𝘓, λ). 
 
-Also, principal-component analysis [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+Also, principal-component analysis (PCA) [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) was applied in an attempt for feature reduction.  Given that all of our features were already mostly orthogonal — except possibly for the population-density estimates, themselves — PCA afforded no reduction in dimensionality. Furthermore, all of the DWT coefficients still contained significant information.
 
-sklearn.cluster.KMeans
+Finally, meta-parameter searches of the `n_clust` number of clusters attribute for the kMeans algorithm [`sklearn.cluster.KMeans`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) were performed.
+
+
+<p align="center">
+
+#### Figure 7 — Cluster silhouette scores [`sklearn.metrics.silhouette_score`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) versus `n_cluster` for kMeans clusters.
+
+<img width="600" src="./Graphics/silhouette_vs_nclust.png" > 
+
+</p>
+
+
+
 
 ## Model evaluation.
 
