@@ -126,8 +126,9 @@ Our problem statement suggested the use of real-estate listings to locate potent
 During our search for reliable real estate listing data, we did come across a paid service that tracks AirBNB rentals that had excellent Johannesburg rental data but that data, was unfortunately, locked behind a paywall that proved too costly for this initial exploration.  Future endevors should attempt to pay and extract this data if the situation allows for it.
 </p>
 
+<p align="center">
 <img height="402" width="800" src="/Graphics/airdna.png" > 
-
+</p>
 
 ## Approach to modeling.
 
