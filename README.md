@@ -30,7 +30,7 @@ The team selected Johannesburg, SA for purposes of prototyping.  Johannesburg me
 
 We seek here to identify local concentrations that are not reflected in official or commercial records. Applying a *data-science* approach, we attempt to compare unofficial measurements of local population densities with official or commercial sources. Our "slums" will be localities in which high concentrations of residents are indicated that do not coincide with "official" sources.
 
-Some "ground truth" is available.  A Wikipedia article [*List of slums in South Africa*](https://en.wikipedia.org/wiki/List_of_slums_in_South_Africa) specifically identifies [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng) in [Johennesburg](https://en.wikipedia.org/wiki/Johannesburg), our target region.  This area is visually distinct in overhead imagery we use in our analysis.
+Some "ground truth" is available.  A Wikipedia article [*List of slums in South Africa*](https://en.wikipedia.org/wiki/List_of_slums_in_South_Africa) specifically identifies [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng) in [Johannesburg](https://en.wikipedia.org/wiki/Johannesburg), our target region.  This area is visually distinct in overhead imagery we use in our analysis.
 
 ## Technical Approach.
 
@@ -110,7 +110,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 <p align="center">
 
-#### Figure 4 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
+#### Figure 4 — Facebook population-distribution measurements within the greater Johannesburg, SA region.
 
 <img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
 
@@ -168,12 +168,9 @@ Conceptually, DWTs somewhat resemble a hybrid between a tree and principal-compo
 
 The distinct Facebook population-density estimates at 30-meter resolution provide our principal explanatory variables.  These contain geographic (𝘓, λ) and point population-density estimates.  We extend these with imagery-feature attributes.  First, we compress our three-channel (Red, Blue Green) image into a single-channel gray-scale intensity array. We take a 128×128-pixel window centered on each Facebook population-density estimate. 
 
-Figure 5 illustrates the DWT process. The original image is a 128×128-pixel window  centered at 27.985𝘓, -26.115λ. Figure 5 shows a four-level DWT decomposition.  Our *Original Image* is *Level 0*. DWT Level 𝘕 consists of four orthogonal components:  $c_A$, the approximation; $c_H$, the horizontal detail; $c_V$
+Figure 5 illustrates the DWT process. The original image is a 128×128-pixel window  centered at 27.985𝘓, -26.115λ. Figure 5 shows a four-level DWT decomposition.  Our *Original Image* is *Level 0*. DWT Level 𝘕 consists of four orthogonal components:  cA_𝘕, the approximation; cH_𝘕, the horizontal detail; cV_𝘕, the vertical detail; and cD_𝘕, the diagonal detail. These result from quartenary orthogonal decomposition of cA at the preceding level 𝘕-1. 
 
-Generating each subsequent level involves quaternary orthogonal decomposition of 
-
-Our model is based on three levels. This produces a model matr
-
+The model described here is based on three levels.  This produced an explanatory-variable matrix comprised of 1,603 features for each of ≲66,000 observations. 
 
 <p align="center">
 
@@ -185,7 +182,13 @@ Our model is based on three levels. This produces a model matr
 
 ### Unsupervised-model calculation:  K-means clustering.
 
+We employed a k-Means clustering approach of the data described above.  That is, our explanatory variables included the Facebook population-density estimates, the corresponding geographic (𝘓, λ) for each, and all of the coefficients from a three-level DWT of a 128×128-pixel window centered on each.
 
+Models were fit for variations on these characteristics, including DWT window size and DWT levels. Models were considered with the data scaled and non-scaled.  Non-scaled data produced more-localized results, owing to the affects of strong (𝘓, λ). 
+
+Also, principal-component analysis [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html)
+
+sklearn.cluster.KMeans
 
 ## Model evaluation.
 
