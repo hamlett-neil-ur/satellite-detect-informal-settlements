@@ -126,8 +126,8 @@ Our problem statement suggested the use of real-estate listings to locate potent
 During our search for reliable real estate listing data, we did come across a paid service that tracks AirBNB rentals that had excellent Johannesburg rental data but that data, was unfortunately, locked behind a paywall that proved too costly for this initial exploration.  Future endevors should attempt to pay and extract this data if the situation allows for it.
 </p>
 
-#### Figure 5 — AirDNA Listing Site For Future Projects.
-https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview
+
+[#### Figure 5 — AirDNA Listing Site For Future Projects.](https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview) (AirDNA)
 <p align="center">
 <img height="402" width="800" src="/Graphics/airdna.png" > 
 </p>
