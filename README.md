@@ -30,7 +30,7 @@ The team selected Johannesburg, SA for purposes of prototyping.  Johannesburg me
 
 We seek here to identify local concentrations that are not reflected in official or commercial records. Applying a *data-science* approach, we attempt to compare unofficial measurements of local population densities with official or commercial sources. Our "slums" will be localities in which high concentrations of residents are indicated that do not coincide with "official" sources.
 
-Some "ground truth" is available.  A Wikipedia article [*List of slums in South Africa*](https://en.wikipedia.org/wiki/List_of_slums_in_South_Africa) specifically identifies [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng) in [Johennesburg](https://en.wikipedia.org/wiki/Johannesburg), our target region.  This area is visually distinct in overhead imagery we use in our analysis.
+Some "ground truth" is available.  A Wikipedia article [*List of slums in South Africa*](https://en.wikipedia.org/wiki/List_of_slums_in_South_Africa) specifically identifies [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng) in [Johannesburg](https://en.wikipedia.org/wiki/Johannesburg), our target region.  This area is visually distinct in overhead imagery we use in our analysis.
 
 ## Technical Approach.
 
@@ -110,7 +110,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 <p align="center">
 
-#### Figure 4 — Facebook population-distribution measurements within the greater Johennesburg, SA region.
+#### Figure 4 — Facebook population-distribution measurements within the greater Johannesburg, SA region.
 
 <img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
 
@@ -126,6 +126,15 @@ Our problem statement suggested the use of real-estate listings to locate potent
 During our search for reliable real estate listing data, we did come across a paid service that tracks AirBNB rentals that had excellent Johannesburg rental data but that data, was unfortunately, locked behind a paywall that proved too costly for this initial exploration.  Future endevors should attempt to pay and extract this data if the situation allows for it.
 </p>
 
+
+#### Figure 5 — [AirDNA Listing Site For Future Projects.](https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview)
+<p align="center">
+<img height="402" width="800" src="/Graphics/airdna.png" > 
+</p>
+
+<p>
+We really tried to aquire the real estate data from AirDNA because not having it forced us to rely on non individual level data that could have been used to train a more sophisticated model.
+</p>
 
 ## Approach to modeling.
 
@@ -159,14 +168,13 @@ Conceptually, DWTs somewhat resemble a hybrid between a tree and principal-compo
 
 The distinct Facebook population-density estimates at 30-meter resolution provide our principal explanatory variables.  These contain geographic (𝘓, λ) and point population-density estimates.  We extend these with imagery-feature attributes.  First, we compress our three-channel (Red, Blue Green) image into a single-channel gray-scale intensity array. We take a 128×128-pixel window centered on each Facebook population-density estimate. 
 
-Figure 5 illustrates the DWT process. The original image is a 128×128-pixel window  centered at 27.985𝘓, -26.115λ. Figure 5 shows a four-level DWT decomposition.  Our *Original Image* is *Level 0*.  Generating each subsequent level involves quaternary orthogonal decomposition of each 
+Figure 5 illustrates the DWT process. The original image is a 128×128-pixel window  centered at 27.985𝘓, -26.115λ. Figure 5 shows a four-level DWT decomposition.  Our *Original Image* is *Level 0*. DWT Level 𝘕 consists of four orthogonal components:  cA_𝘕, the approximation; cH_𝘕, the horizontal detail; cV_𝘕, the vertical detail; and cD_𝘕, the diagonal detail. These result from quartenary orthogonal decomposition of cA at the preceding level 𝘕-1. 
 
-Our model is based on three levels. This produces a model matr
-
+The model described here is based on three levels.  This produced an explanatory-variable matrix comprised of 1,603 features for each of ≲66,000 observations. 
 
 <p align="center">
 
-#### Figure 5 — Illustration of discrete-wavelet transformation of exemplary image window.
+#### Figure 6 — Illustration of discrete-wavelet transformation of exemplary image window.
 
 <img width="840" src="./Graphics/nice_area_dwt.png" > 
 
@@ -174,10 +182,62 @@ Our model is based on three levels. This produces a model matr
 
 ### Unsupervised-model calculation:  K-means clustering.
 
+We employed a k-Means clustering approach of the data described above.  That is, our explanatory variables included the Facebook population-density estimates, the corresponding geographic (𝘓, λ) for each, and all of the coefficients from a three-level DWT of a 128×128-pixel window centered on each.
+
+Models were fit for variations on these characteristics, including DWT window size and DWT levels. Models were considered with the data scaled and non-scaled.  Non-scaled data produced more-localized results, owing to the affects of strong (𝘓, λ). 
+
+Also, principal-component analysis (PCA) [`sklearn.decomposition.PCA`](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) was applied in an attempt for feature reduction.  Given that all of our features were already mostly orthogonal — except possibly for the population-density estimates, themselves — PCA afforded no reduction in dimensionality. Furthermore, all of the DWT coefficients still contained significant information.
+
+Finally, meta-parameter searches of the `n_clust` number of clusters attribute for the kMeans algorithm [`sklearn.cluster.KMeans`](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) were performed.  Figure 7 shows the results.  The model did not produce significant silhouette scores.
+
+<p align="center">
+
+#### Figure 7 — Cluster silhouette scores [`sklearn.metrics.silhouette_score`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) versus `n_cluster` for kMeans clusters.
+
+<img width="840" align = "center" src="./Graphics/silhouette_vs_nclust.png" > 
+
+</p>
+
+*What appears to be happening*?  Figure 8 shows two-dimensional kernel-density estimates [`seaborn.kdeplot`](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) for nine arbitrarily-selected clusters.  These seem to explain the week silhouette scores.  Three observations are noteworthy.
+
+First, the cluster distributions are nonconvex and widely distributed.  They are particularly expansive in the vertical dimension.  We have multiple peaks.  This means lots of cluster members are going to be widely separated, with dilutes silhouette scores.
+
+Second, we see more-localized clusters in the vicinity of our know "slum", Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng).  This is the bright area bounded by about 28.08 and 28.1 𝘓 and -26.13 and 26.11 λ. *Our imagery features appear to discriminate slum from non-slum areas*.
+
+Thirdly, our non-slum contours appear to be concentrated between about 28.02 and 28.07 𝘓. This seems to be the heart of the Johannesburg populated area.  It seems that the `Population` attribute is dominant in this region.
+
+
+<p align="center">
+
+#### Figure 8 — Kernel-Density Estimate (KDE) plots [`seaborn.kdeplot`](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) for nine selected clusters.
+
+<img width="840" align = "center" src="./Graphics/selected_cluster_kdes.png" > 
+
+</p>
+
 
 
 ## Model evaluation.
 
+What this means in terms of our original objective of identifying slums?  Figure 9 attempts to clarify this by overlaying contour plots of the distributions on an overhead image also containing administrative boundaries. The contours are simplifications of the KDE distributions in Figure 8.
+
+For each cluster we calculate the Euclidian distance from its centroid. We draw two contour lines for each cluster.  This gives the location of the peaks of distributions.
+
+
+<p align="center">
+
+#### Figure 9 — Overlay of contour plots [`matplotlib.pyplot.contour`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html) for selected clusters on Johannesburg, SA overhead image with administrative boundaries.
+
+<img width="840" align = "center" src="./Graphics/overlay.png" > 
+
+</p>
+
+
+<p align="center">
+
+<img width="840" align = "center" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
+
+</p>
 
 ## Conclusions and recommendations for further work.
 
