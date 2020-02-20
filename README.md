@@ -127,7 +127,7 @@ During our search for reliable real estate listing data, we did come across a pa
 </p>
 
 
-(#airdna)
+#airdna
 #### Figure 5 — [AirDNA Listing Site For Future Projects.](https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview)
 <p align="center">
 <img height="402" width="800" src="/Graphics/airdna.png" > 
