@@ -277,8 +277,6 @@ Since Facebook developed it's high resolution population density maps with the i
 One way we could attempt to improve the accuracy of our clustering algorithm is to use topagraphica imagery from a high quality source like United States Geological Survey or NASA which has a set of 1 meter resolution map images while Facebook has 30 meter.
 
 This may or may not help with the performance of our model.
-<br>
-https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
-<br>
-<br>
+
 Would people consent to being tracked in that manner? Would Facebook allow researchers and first responders to access its highly sensitive data?  Maybe maybe not, but I contend that their data is the best and fastest way to locate transient impoverished populations so that aid workers can provide more effective assistance.
+https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
