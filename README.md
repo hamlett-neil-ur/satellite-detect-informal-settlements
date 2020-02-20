@@ -163,7 +163,8 @@ We created an interactive map of the City of Johannesburg Metropolitan Municipal
  
  </p>
  <br>
-## Leaflet Map of City of Johannesburg Metropolitan Municipality
+ 
+Leaflet Map of City of Johannesburg Metropolitan Municipality
 <img width="500" src="./Graphics/leaflet.png" > 
 
 ## Approach to modeling.
