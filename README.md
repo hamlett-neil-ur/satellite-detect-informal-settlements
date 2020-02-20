@@ -127,6 +127,7 @@ During our search for reliable real estate listing data, we did come across a pa
 </p>
 
 
+(#airdna)
 #### Figure 5 — [AirDNA Listing Site For Future Projects.](https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview)
 <p align="center">
 <img height="402" width="800" src="/Graphics/airdna.png" > 
@@ -237,3 +238,4 @@ For each cluster we calculate the Euclidian distance from its centroid. We draw 
 The lack of real estate data makes it more difficult to identify slum areas but the idea of using satellite data to locate clusters of upmapped populations is promising.
 
 If we wanted to refine this process, we could pay for access to the commerical real estate data mentioned above.
+[airdna](#airdna)
