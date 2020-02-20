@@ -139,7 +139,7 @@ We really tried to aquire the real estate data from AirDNA because not having it
 
 #### Figure 6 — Map Display of Census Data By Neighborhood
 <p>
-We created an interactive map of the City of Johannesburg Metropolitan Municipality using [Leafet & R.](https://rstudio.github.io/leaflet/)
+We created an interactive map of the City of Johannesburg Metropolitan Municipality using Leaflet and R. [AirDNA Listing Site For Future Projects.](https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview)
 <img width="500" src="./Graphics/leaflet.png" > 
 </p>
 
