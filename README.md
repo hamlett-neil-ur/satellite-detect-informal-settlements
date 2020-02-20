@@ -279,4 +279,5 @@ One way we could attempt to improve the accuracy of our clustering algorithm is 
 This may or may not help with the performance of our model.
 
 Would people consent to being tracked in that manner? Would Facebook allow researchers and first responders to access its highly sensitive data?  Maybe maybe not, but I contend that their data is the best and fastest way to locate transient impoverished populations so that aid workers can provide more effective assistance.
+<br>
 https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
