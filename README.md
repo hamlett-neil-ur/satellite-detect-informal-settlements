@@ -240,4 +240,5 @@ If we wanted to refine this process, we could pay for access to the commerical r
 
 In the United States, blighted areas are often populated with abandoned structures.  Because people are strugging to survive, many populations also turn out to be highly transient and difficult to track down and contact.  If the person who lives in impoverished conditions has a cell phone, it is usually a burner cell which is also difficult to track.
 
-
+Since Facebook developed it's high resolution population density maps with the intent of helping out NGO's plan more effective interventions, perhaps Facebook can access it's geolocational user data within country to identify clusters of impoverished users with great precision.
+https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
