@@ -161,11 +161,11 @@ We created an interactive map of the City of Johannesburg Metropolitan Municipal
 | Electricity for lighting           | float     |
 | Percent No Income                  | float     |
  
+ </p>
  <br>
  <br>
-<b>Leaflet Map of City of Johannesburg Metropolitan Municipality<b>
+Leaflet Map of City of Johannesburg Metropolitan Municipality
 <img width="500" src="./Graphics/leaflet.png" > 
-</p>
 
 ## Approach to modeling.
 
