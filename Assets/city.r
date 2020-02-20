@@ -29,20 +29,23 @@ pal <- colorBin("YlOrRd", domain = income, bins = bins)
 # r <- raster("population_zaf_2018-10-01.tif")
 
 city <- leaflet(city) %>%
-  addProviderTiles(providers$CartoDB.Positron) %>%
+  addProviderTiles(providers$CartoDB.Positron, group = 'basic') %>%
+  addProviderTiles(providers$OpenTopoMap, group = 'street') %>%
+  addProviderTiles(providers$Esri.WorldImagery, group = 'satellite') %>%
   addPolygons(
-    stroke = TRUE, smoothFactor = 0.3, fillOpacity = 0.7, weight = 2,
+    stroke = TRUE, smoothFactor = 0.3, fillOpacity = 0.6, weight = 2,
     fillColor = ~pal(income), label = labels,
     labelOptions = labelOptions(
       style = list("font-weight" = "normal", padding = "3px 8px"),
       textsize = "15px",
       direction = "auto")) %>%
-  addRasterImage(r, opacity = 0.8, group = 'Population Density') %>%
+  addRasterImage(r, opacity = 0.5, group = 'Population Density') %>%
   addLegend(pal = pal, values = ~city$map_output_Percent.No.Income, opacity = 0.7,
             position = "bottomright", title = "Percent No Income") %>%
   addLayersControl(
+    baseGroups = c("basic", "street", 'satellite'),
     overlayGroups = c("Population Density"),
     options = layersControlOptions(collapsed = FALSE)
   )
 
-saveWidget(city, file="city.html")
+saveWidget(city, file="city.html", title = 'johannesburg')
