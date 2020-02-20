@@ -6,7 +6,7 @@ library(htmlwidgets)
 
 setwd('C:/Users/onomi/Desktop/dsi/projects/DC_DSI10_Team5_Client_Proj/Assets')
 city <- geojsonio::geojson_read("final.geojson", what = "sp")
-
+r <- raster("clipped_geotiff.tif")
 
 bins <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.56)
 
@@ -37,8 +37,12 @@ city <- leaflet(city) %>%
       style = list("font-weight" = "normal", padding = "3px 8px"),
       textsize = "15px",
       direction = "auto")) %>%
+  addRasterImage(r, opacity = 0.8, group = 'Population Density') %>%
   addLegend(pal = pal, values = ~city$map_output_Percent.No.Income, opacity = 0.7,
-            position = "bottomright", title = "Percent No Income") #%>%
-  # addRasterImage(r, colors = pal, opacity = 0.8)
+            position = "bottomright", title = "Percent No Income") %>%
+  addLayersControl(
+    overlayGroups = c("Population Density"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
 
 saveWidget(city, file="city.html")
