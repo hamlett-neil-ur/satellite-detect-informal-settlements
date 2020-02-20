@@ -8,7 +8,7 @@ setwd('C:/Users/onomi/Desktop/dsi/projects/DC_DSI10_Team5_Client_Proj/Assets')
 city <- geojsonio::geojson_read("final.geojson", what = "sp")
 
 
-bins <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6)
+bins <- c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.56)
 
 labels <- sprintf(
   "<strong>City: %s</strong>,
