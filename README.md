@@ -136,7 +136,12 @@ During our search for reliable real estate listing data, we did come across a pa
 We really tried to aquire the real estate data from AirDNA because not having it forced us to rely on non individual level data that could have been used to train a more sophisticated model.
 </p>
 
+
+#### Figure 6 — Map Display of Census Data By Neighborhood
+<p>
+
 <img width="500" src="./Graphics/leaflet.png" > 
+</p>
 
 ## Approach to modeling.
 
