@@ -205,7 +205,7 @@ The model described here is based on three levels.  This produced an explanatory
 
 <p align="center">
 
-#### Figure 6 — Illustration of discrete-wavelet transformation of exemplary image window.
+#### Figure 7 — Illustration of discrete-wavelet transformation of exemplary image window.
 
 <img width="840" src="./Graphics/nice_area_dwt.png" > 
 
@@ -223,7 +223,7 @@ Finally, meta-parameter searches of the `n_clust` number of clusters attribute f
 
 <p align="center">
 
-#### Figure 7 — Cluster silhouette scores [`sklearn.metrics.silhouette_score`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) versus `n_cluster` for kMeans clusters.
+#### Figure 8 — Cluster silhouette scores [`sklearn.metrics.silhouette_score`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html) versus `n_cluster` for kMeans clusters.
 
 <img width="840" align = "center" src="./Graphics/silhouette_vs_nclust.png" > 
 
@@ -240,7 +240,7 @@ Thirdly, our non-slum contours appear to be concentrated between about 28.02 and
 
 <p align="center">
 
-#### Figure 8 — Kernel-Density Estimate (KDE) plots [`seaborn.kdeplot`](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) for nine selected clusters.
+#### Figure 9 — Kernel-Density Estimate (KDE) plots [`seaborn.kdeplot`](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) for nine selected clusters.
 
 <img width="840" align = "center" src="./Graphics/selected_cluster_kdes.png" > 
 
@@ -257,7 +257,7 @@ For each cluster we calculate the Euclidian distance from its centroid. We draw 
 
 <p align="center">
 
-#### Figure 9 — Overlay of contour plots [`matplotlib.pyplot.contour`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html) for selected clusters on Johannesburg, SA overhead image with administrative boundaries.
+#### Figure 10 — Overlay of contour plots [`matplotlib.pyplot.contour`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.contour.html) for selected clusters on Johannesburg, SA overhead image with administrative boundaries.
 
 <img width="840" align = "center" src="./Graphics/overlay.png" > 
 
