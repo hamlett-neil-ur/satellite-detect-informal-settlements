@@ -7,6 +7,14 @@
 
 </p>
 
+File Directory:
+- Assets (Contains shapefiles R scripts used to create final map.)
+- Code (Contains code used to scrape government website + clustering algorithm.)
+- Data (Raw data from scrape and population density data.)
+- Graphics (Geotiffs and images used in ReadMe + Power Point)
+	- ReadMe.md (ReadMe)
+	- city_final.html (Final Leaflet Interactive Map of City of Johannesburg Metropolitan Municipality)
+	- .gitignore (Gitnore)
 
 ## Friday, February 21, 2020.
 https://git.generalassemb.ly/DSI-US-10/project-client-project
