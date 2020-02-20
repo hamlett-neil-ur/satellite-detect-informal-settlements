@@ -265,9 +265,8 @@ Since Facebook developed it's [high resolution population density maps](https://
 ) with the intent of helping out NGO's plan more effective interventions, perhaps Facebook can access it's geolocation user data within country to identify clusters of impoverished users with great precision.
 
 Would people consent to being tracked in that manner? Would Facebook allow researchers and first responders to access its highly sensitive data?  Maybe maybe not, but I contend that their data is the best and fastest way to locate transient impoverished populations so that aid workers can provide more effective assistance.
-<br>
 
 ### Professional Grade Imagery
 One way we could attempt to improve the accuracy of our clustering algorithm is to use topagraphica imagery from a [high quality source](https://eos.com/blog/7-top-free-satellite-imagery-sources-in-2019/) like United States Geological Survey or NASA which has a set of 1 meter resolution map images while Facebook has 30 meter.
 
-This may or may not help with the performance of our model.
+This may or may not help with the performance of our model but it's worth exploring.
