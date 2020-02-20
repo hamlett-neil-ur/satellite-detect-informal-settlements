@@ -234,6 +234,8 @@ For each cluster we calculate the Euclidian distance from its centroid. We draw 
 
 The lack of real estate data makes it more difficult to identify slum areas but the idea of using satellite data to locate clusters of upmapped populations is promising.
 
+If we wanted to refine this process, we could pay for access to the commerical real estate data mentioned above.
+
 ## Conclusions and recommendations for further work.
 
 
