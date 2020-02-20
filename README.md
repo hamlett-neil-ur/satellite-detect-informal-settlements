@@ -273,9 +273,10 @@ In the United States, blighted areas are often populated with abandoned structur
 
 Since Facebook developed it's high resolution population density maps with the intent of helping out NGO's plan more effective interventions, perhaps Facebook can access it's geolocation user data within country to identify clusters of impoverished users with great precision.
 
-## Professional Grade Imagery
+### Professional Grade Imagery
 One way we could attempt to improve the accuracy of our clustering algorithm is to use topagraphica imagery from a high quality source like United States Geological Survey or NASA which has a set of 1 meter resolution map images while Facebook has 30 meter.
 
+This may or may not help with the performance of our model.
 <br>
 https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
 <br>
