@@ -7,7 +7,7 @@
 
 </p>
 
-File Directory:
+#### File Directory:
 - Assets (Contains shapefiles R scripts used to create final map.)
 - Code (Contains code used to scrape government website + clustering algorithm.)
 - Data (Raw data from scrape and population density data.)
