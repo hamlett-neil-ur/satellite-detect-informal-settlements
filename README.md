@@ -137,6 +137,35 @@ We really tried to aquire the real estate data from AirDNA because not having it
 </p>
 
 
+#### Figure 6 — Map Display of Census Data By Neighborhood
+<p>
+We created an interactive map of the City of Johannesburg Metropolitan Municipality using Leaflet and R. The cenesus of the various neighborhoods collected various useful nuggest of information such as population density, percentage of homes wired for electricty and percent of households with no income.
+
+| Columns                            | Data Type |
+|------------------------------------|-----------|
+| City                               | obj       |
+| Total Population                   | int       |
+| Young (0-14)                       | float     |
+| Working Age (15-64)                | float     |
+| Elderly (65+)                      | float     |
+| Population density                 | obj       |
+| No schooling aged 20+              | float     |
+| Higher education aged 20+          | float     |
+| Matric aged 20+                    | float     |
+| Number of households               | float     |
+| Average household size             | float     |
+| Female headed households           | float     |
+| Housing owned/paying off           | float     |
+| Flush toilet connected to sewerage | float     |
+| Weekly refuse removal              | float     |
+| Electricity for lighting           | float     |
+| Percent No Income                  | float     |
+ 
+ </p>
+ <br>
+ 
+Leaflet Map of City of Johannesburg Metropolitan Municipality
+<img width="500" src="./Graphics/leaflet.png" > 
 
 ## Approach to modeling.
 
@@ -243,8 +272,12 @@ If we wanted to refine this process, we could pay for access to the commerical r
 In the United States, blighted areas are often populated with abandoned structures.  Because people are strugging to survive, many populations also turn out to be highly transient and difficult to track down and contact.  If the person who lives in impoverished conditions has a cell phone, it is usually a burner cell which is also difficult to track.
 
 Since Facebook developed it's high resolution population density maps with the intent of helping out NGO's plan more effective interventions, perhaps Facebook can access it's geolocation user data within country to identify clusters of impoverished users with great precision.
+
+### Professional Grade Imagery
+One way we could attempt to improve the accuracy of our clustering algorithm is to use topagraphica imagery from a high quality source like United States Geological Survey or NASA which has a set of 1 meter resolution map images while Facebook has 30 meter.
+
+This may or may not help with the performance of our model.
+
+Would people consent to being tracked in that manner? Would Facebook allow researchers and first responders to access its highly sensitive data?  Maybe maybe not, but I contend that their data is the best and fastest way to locate transient impoverished populations so that aid workers can provide more effective assistance.
 <br>
 https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
-<br>
-<br>
-Would people consent to being tracked in that manner? Would Facebook allow researchers and first responders to access its highly sensitive data?  Maybe maybe not, but I contend that their data is the best and fastest way to locate transient impoverished populations so that aid workers can provide more effective assistance.
