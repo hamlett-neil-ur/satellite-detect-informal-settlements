@@ -136,6 +136,8 @@ During our search for reliable real estate listing data, we did come across a pa
 We really tried to aquire the real estate data from AirDNA because not having it forced us to rely on non individual level data that could have been used to train a more sophisticated model.
 </p>
 
+
+
 ## Approach to modeling.
 
 Figure 2, in addition to representing our our information architecture, makes brief mention of the approach to analysis.  Slum detection is our objective.  We seek to accomplish this using ambient information including population-distribution attributes, and overhead imagery.
