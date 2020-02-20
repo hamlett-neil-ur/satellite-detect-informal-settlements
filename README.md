@@ -232,12 +232,7 @@ For each cluster we calculate the Euclidian distance from its centroid. We draw 
 
 </p>
 
-
-<p align="center">
-
-<img width="840" align = "center" src="./Graphics/M. Ono Fill Insvg.svg.png" > 
-
-</p>
+The lack of real estate data makes it more difficult to identify slum areas but the idea of using satellite data to locate clusters of upmapped populations is promising.
 
 ## Conclusions and recommendations for further work.
 
