@@ -118,27 +118,20 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 ### *Commercial*, ad-hoc population-distribution data.
 
-<p>
+
 Our problem statement suggested the use of real-estate listings to locate potential slum areas within Johannesburg. However there aren't any Zillow.com equivalents in South Africa to locate detailed real estate listing information that would allow us to locate price sensitive areas of the municipality.
-</p>
 
-<p>
 During our search for reliable real estate listing data, we did come across a paid service that tracks AirBNB rentals that had excellent Johannesburg rental data but that data, was unfortunately, locked behind a paywall that proved too costly for this initial exploration.  Future endevors should attempt to pay and extract this data if the situation allows for it.
-</p>
-
 
 #### Figure 5 — [AirDNA Listing Site For Future Projects.](https://www.airdna.co/vacation-rental-data/app/za/gauteng/johannesburg/overview)
 <p align="center">
 <img height="402" width="800" src="/Graphics/airdna.png" > 
 </p>
 
-<p>
 We really tried to aquire the real estate data from AirDNA because not having it forced us to rely on non individual level data that could have been used to train a more sophisticated model.
-</p>
-
 
 #### Figure 6 — Map Display of Census Data By Neighborhood
-<p>
+
 We created an interactive map of the City of Johannesburg Metropolitan Municipality using Leaflet and R. The cenesus of the various neighborhoods collected various useful nuggest of information such as population density, percentage of homes wired for electricty and percent of households with no income.
 
 | Columns                            | Data Type |
@@ -161,9 +154,7 @@ We created an interactive map of the City of Johannesburg Metropolitan Municipal
 | Electricity for lighting           | float     |
 | Percent No Income                  | float     |
  
- </p>
  <br>
- 
 Leaflet Map of City of Johannesburg Metropolitan Municipality
 <img width="500" src="./Graphics/leaflet.png" > 
 
@@ -278,7 +269,7 @@ Would people consent to being tracked in that manner? Would Facebook allow resea
 https://ai.facebook.com/blog/mapping-the-world-to-help-aid-workers-with-weakly-semi-supervised-learning
 
 ### Professional Grade Imagery
-One way we could attempt to improve the accuracy of our clustering algorithm is to use topagraphica imagery from a high quality source like United States Geological Survey or NASA which has a set of 1 meter resolution map images while Facebook has 30 meter.
+One way we could attempt to improve the accuracy of our clustering algorithm is to use topagraphica imagery from a [high quality source](https://eos.com/blog/7-top-free-satellite-imagery-sources-in-2019/) like United States Geological Survey or NASA which has a set of 1 meter resolution map images while Facebook has 30 meter.
 
 This may or may not help with the performance of our model.
 https://eos.com/blog/7-top-free-satellite-imagery-sources-in-2019/
