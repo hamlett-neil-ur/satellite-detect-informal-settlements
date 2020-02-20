@@ -232,47 +232,8 @@ For each cluster we calculate the Euclidian distance from its centroid. We draw 
 
 </p>
 
+## Conclusions and recommendations for further work.
+
 The lack of real estate data makes it more difficult to identify slum areas but the idea of using satellite data to locate clusters of upmapped populations is promising.
 
 If we wanted to refine this process, we could pay for access to the commerical real estate data mentioned above.
-
-## Conclusions and recommendations for further work.
-
-
-
-
-
------
------
-<p align="center">
-
-# DSI Boilerplate.
-
-</p>
-
-
-## Proposed Deliverables:
-
-⓵ A short write up describing the project, results, and next steps or proposal to scale
-
-⓶ Open source code for full process from gathering data to calculating and mapping the real estate to population density ratio
-
-⓷ Proof of concept or pilot from a city or collection of cities.
-
-## Requirements
-For the purposes of a DSI project, you must meet a few technical requirements. They are:
-
-A README.md file in your project repo. Note that README files are automatically rendered by GitHub when you view a repo. Your README should contain:
-
-A problem statement.
-A succinct formulation of the question your analysis seeks to answer.
-A table of contents, which should indicate which notebook or scripts a stakeholder should start with, and a link to an executive summary.
-A paragraph description of the data you used, plus your data acquisition, ingestion, and cleaning steps.
-A short description of software requirements (e.g., Pandas, Scikit-learn) required by your analysis.
-Your notebook(s) should be reproducible and error-free. This means:
-
-You should set a random seed at the start of every notebook, using np.random.seed(...). This will ensure that the random numbers generated in your notebook will be the same every time.
-You need to provide a relative path to your data, so that if I clone your repo to my machine I can run everything in your repo without error. (You also provide links to any publicly accessible data.)
-I should be able to Restart & Run All in your notebook(s) and see that the exact same results are reproduced.
-To check that everything worked properly, you may consider forking your own repo to a different location on your computer and checking that all notebooks can run properly from top to bottom.
-Bear in mind that the value you provide to New Light Technologies may come from data ingestion, data cleaning, EDA, and/ or a dashboard, etc. While a model may not be immediately apparent, be creative. Without us telling you exactly what model to build, how could you build a model to increase performance or generate better insights when answering the problem you are facing?
