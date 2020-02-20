@@ -132,7 +132,7 @@ We really tried to aquire the real estate data from AirDNA because not having it
 
 #### Figure 6 — Map Display of Census Data By Neighborhood
 
-We created an interactive map of the City of Johannesburg Metropolitan Municipality using Leaflet and R. The cenesus of the various neighborhoods collected various useful nuggest of information such as population density, percentage of homes wired for electricty and percent of households with no income.
+We created an interactive map of the City of Johannesburg Metropolitan Municipality using [Leaflet and R](https://rstudio.github.io/leaflet/). The cenesus of the various neighborhoods collected various useful nuggest of information such as population density, percentage of homes wired for electricty and percent of households with no income.
 
 | Columns                            | Data Type |
 |------------------------------------|-----------|
