@@ -236,4 +236,6 @@ For each cluster we calculate the Euclidian distance from its centroid. We draw 
 
 The lack of real estate data makes it more difficult to identify slum areas but the idea of using satellite data to locate clusters of upmapped populations is promising.
 
-If we wanted to refine this process, we could pay for access to the commerical real estate data mentioned above. The tricky thing with aerial image data is that we're only locating the structures of impoverished areas not necessarily the location of impoverished people. 
+If we wanted to refine this process, we could pay for access to the commerical real estate data mentioned above. The tricky thing with aerial image data is that we're only locating the structures of impoverished areas not necessarily the location of impoverished people.
+
+In the United States, blighted areas are often populated with abandoned structures.  Because people are strugging to survive, many populations also turn out to be highly transient and difficult to track down and contact.
