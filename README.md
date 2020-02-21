@@ -4,20 +4,29 @@
 
 # Improve Slum Area Identification through Real-Estate Data (problem 18)
 
-## Friday, February 21, 2020.  https://git.generalassemb.ly/DSI-US-10/project-client-project
+#### Friday, February 21, 2020.  https://git.generalassemb.ly/DSI-US-10/project-client-project
 
-
-
-</p>
+</p>  
 
 ## Team members:
 
 |[Michael Ono](https://www.linkedin.com/in/michael-ono/)|[Dylan Blough](https://www.linkedin.com/in/dylan-blough-b2185619a/)|[Neil Hamlett](https://www.linkedin.com/in/neil-hamlett-strategic-quant/)|
 |---|---|---|
 
+
+## Executive Summary/Abstract.
+
+We demonstrate a proof-of-concept prototype of a passive capability to identify *informal settlements* (*aka*, "slums"). A generalized method applicable to developing-market regions is our goal.  We demonstrate using the Johannesburg, SA region.  Available information includes satellite imagery, census data, open-source population-density estimates (e.g., [Facebook Population-Density Maps](https://dataforgood.fb.com/tools/population-density-maps/)), and geographic information about bounadries of political/administrative subdividsions.  The approach inolved combining a machine-learning clustering ap
+
+The approach clearly distinguishes widely-recognized the  [Alexandra, Gauteng](https://en.wikipedia.org/wiki/Alexandra,_Gauteng) "slum" form other comminities within the [Johannesburg](https://en.wikipedia.org/wiki/Johannesburg) region. The ability to discriminate between other communities in [Johannesburg](https://en.wikipedia.org/wiki/Johannesburg) is less clear. [Population-Density Maps](https://dataforgood.fb.com/tools/population-density-maps/) combined with [satellite imagery](https://www.google.com/earth/) does not support discrimination between other administrative/political subdivisions.
+
+The approach is recommended for further investigation. Employing a novel combination of image-processing and machine-learning methods, it is potentially generalizable.  [Population-Density Maps](https://dataforgood.fb.com/tools/population-density-maps/) are avaiable for most potential areas of interest. In that SA possesses one of the African continent's most-mature census regimes, that information may not be as useful elsewhere. 
+
+
+
 ## File Directory:
 - Assets (Contains shapefiles R scripts used to create final map.)
-- Code (Contains code used to scrape government website + clustering algorithm.)
+- Code (Contains code (pyton notebooks) used to scrape government website + clustering algorithm.)
 - Data (Raw data from scrape and population density data.)
 - Graphics (Geotiffs and images used in ReadMe + Power Point)
 	- ReadMe.md (ReadMe)
