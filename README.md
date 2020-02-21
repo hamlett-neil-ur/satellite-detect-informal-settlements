@@ -176,6 +176,8 @@ We created an interactive map of the City of Johannesburg Metropolitan Municipal
 | Percent No Income                  | float     |
 
 ### Leaflet Map of City of Johannesburg Metropolitan Municipality
+[Lite Weight Hosted Map](https://mono2010.shinyapps.io/city_map/)
+[Download link for full interactive map with population density.](https://drive.google.com/file/d/1Ut-hxwxVblPQ4AsoYsKandLDu3AhIat6/view)
 <img width="500" src="./Graphics/leaflet.png" > 
 
 ## Approach to modeling.
