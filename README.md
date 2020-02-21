@@ -4,10 +4,18 @@
 
 # Improve Slum Area Identification through Real-Estate Data (problem 18)
 
+## Friday, February 21, 2020.  https://git.generalassemb.ly/DSI-US-10/project-client-project
+
+
 
 </p>
 
-#### File Directory:
+## Team members:
+
+|[Michael Ono](https://www.linkedin.com/in/michael-ono/)|[Dylan Blough](https://www.linkedin.com/in/dylan-blough-b2185619a/)|[Neil Hamlett](https://www.linkedin.com/in/neil-hamlett-strategic-quant/)|
+|---|---|---|
+
+## File Directory:
 - Assets (Contains shapefiles R scripts used to create final map.)
 - Code (Contains code used to scrape government website + clustering algorithm.)
 - Data (Raw data from scrape and population density data.)
@@ -16,13 +24,7 @@
 	- city_final.html (Final Leaflet Interactive Map of City of Johannesburg Metropolitan Municipality)
 	- .gitignore (Gitnore)
 
-## Friday, February 21, 2020.
-https://git.generalassemb.ly/DSI-US-10/project-client-project
 
-## Team members:
-
-|[Michael Ono](https://www.linkedin.com/in/michael-ono/)|[Dylan Blough](https://www.linkedin.com/in/dylan-blough-b2185619a/)|[Neil Hamlett](https://www.linkedin.com/in/neil-hamlett-strategic-quant/)|
-|---|---|---|
 
 
 ## Problem Statement. 
