@@ -4,7 +4,7 @@
 
 # Improve Slum Area Identification through Real-Estate Data (problem 18)
 
-#### Friday, February 21, 2020.  https://git.generalassemb.ly/DSI-US-10/project-client-project
+#### Friday, February 21, 2020. 
 
 </p>  
 
