@@ -2,7 +2,7 @@
 <p align="center">
 <img height="90" width="90" src="./Graphics/GA_logo.png" > 
 
-# Improve Slum Area Identification through Real-Estate Data (problem 18)
+# Improve Slum Area Identification through Real-Estate Data
 
 #### Friday, February 21, 2020. 
 
