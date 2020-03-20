@@ -131,7 +131,7 @@ That narrow unpopulated areas appear in this overlay enhances our confidence in 
 
 #### Figure 4 — Facebook population-distribution measurements within the greater Johannesburg, SA region.
 
-<img width="840" src="https://git.generalassemb.ly/hamlett-neil-ga/DC_DSI10_Team5_Client_Proj/blob/master/Graphics/pop_density_geo_overlay.png" > 
+<img width="840" src="./Graphics/pop_density_geo_overlay.png" > 
 
 </p>
 
