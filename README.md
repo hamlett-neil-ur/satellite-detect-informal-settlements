@@ -14,7 +14,7 @@
 |---|---|---|
 
 
-## Executive Summary/Abstract.
+## Executive Summary/Abstract.  
 
 We demonstrate a proof-of-concept prototype of a passive capability to identify *informal settlements* (*aka*, "slums"). A generalized method applicable to developing-market regions is our goal.  We demonstrate using the Johannesburg, SA region.  Available information includes satellite imagery, census data, open-source population-density estimates (e.g., [Facebook Population-Density Maps](https://dataforgood.fb.com/tools/population-density-maps/)), and geographic information about bounadries of political/administrative subdividsions.  The approach is a novel combination of  machine-learning clustering and a mainstream image-processing method.
 
