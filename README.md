@@ -208,7 +208,7 @@ Our *ad hoc* model evaluation seeks to compare results from our unsupervised mod
 
 ### Imagery-feature engineering:  Discrete Wavelet Transform (DWT).
 
-We seek to incorporate features from our overhead imagery into our statistical model.  The Discrete Wavelet Transform (DWT) (e.g., [[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)) enjoys widespread use in image-processing applications. Most-prominently, it forms the basis for the [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000) and [MPEG](http://www.users.abo.fi/jawester/mpeg4/MPEG4_fundamentals2.pdf) data-compression methods.
+We seek to incorporate features from our overhead imagery into our statistical model.  The Discrete Wavelet Transform (DWT) (e.g., [[L. Prasad, S. S. Iyengar, 1997]](https://amzn.to/323O06n)) enjoys widespread use in image-processing applications. Most-prominently, it forms the basis for the [JPEG 2000](https://en.wikipedia.org/wiki/JPEG_2000) and [MPEG](http://www.users.abo.fi/jawester/mpeg4/MPEG4_fundamentals2.pdf) data-compression methods. DWTs have more-general applications in digital-signal processing [[Hamlett, 1993]](https://apps.dtic.mil/dtic/tr/fulltext/u2/a265364.pdf).
 
 Conceptually, DWTs somewhat resemble a hybrid between a tree and principal-component analysis.  DWT algorithms recursively partition a data set a specified number of times.  The partition is accomplished using *filters*, which orthogonalize the data at each stage. We end up with a set of features that are uncorrelated.
 
